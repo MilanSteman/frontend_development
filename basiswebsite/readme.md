@@ -30,9 +30,11 @@ Twitter Profile
 
 **Breakdown-schets(en):**
 
-*Volgen later*
-![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/dummy-image.svg)
+Twitter Home
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/twitter_home_breakdownschets.png)
 
+Twitter Profile
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/twitter_profile_breakdownschets.png)
 
 ## Eindgesprek (week 7/8)
 
