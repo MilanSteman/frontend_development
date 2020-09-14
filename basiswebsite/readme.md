@@ -7,34 +7,39 @@
 
 **Laatst aangepast:** 02/09/2020
 
+**Codepen:** [https://codepen.io/MilanSteman](https://codepen.io/MilanSteman)
 ## Bronnenlijst
-1. [twitter.com](https://twitter.com/home)
+1. [https://www.volkskrant.nl/](https://www.volkskrant.nl/)
 2. ...
 3. ...
 
 ## Intake (week 1)
 
-**Je startniveau:** rood
+**Je startniveau:** Een mix van rood en zwart
 
 **Je focus:** Het liefst beide - responsive en surface.
 
-**Je opdracht:** twitter.com *(zou wel graag wat kleine aanpassingen maken qua stijling + als extra wil ik dat je zelf tweets kan maken en opslaan. Een soort van 'CRUD' met localstorage)*
+**Je opdracht:** De volkskrant home- en nieuwspagina namaken. 
 
 **Screenshot(s):** 
 
-Twitter Home
-![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/twitter_home.png)
+Volkskrant Home
 
-Twitter Profile
-![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/twitter_profile.png)
+![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/home.png)
+
+Volkskrant Nieuwsartikel
+
+![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/nieuws.png)
 
 **Breakdown-schets(en):**
 
-Twitter Home
-![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/twitter_home_breakdownschets.png)
+Volkskrant Home (Breakdown)
 
-Twitter Profile
-![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/twitter_profile_breakdownschets.png)
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/breakdownschets_home.png)
+
+Volkskrant Nieuwsartikel (Breakdown)
+
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/breakdownschets_nieuws.png)
 
 ## Eindgesprek (week 7/8)
 
