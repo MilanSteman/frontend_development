@@ -1,5 +1,282 @@
 /* CSS Document */
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("../fonts/Baskerville/LibreBaskerville-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Benton";
+  src: url("../fonts/Benton/BentonSans\ Regular.otf");
+}
+
+@font-face {
+  font-family: "Benton-Light";
+  src: url("../fonts/Benton/BentonSans\ Light.otf");
+}
+
+@font-face {
+  font-family: "Benton-Thin";
+  src: url("../fonts/Benton/BentonSans\ Thin.otf");
+}
+
+@font-face {
+  font-family: "Benton-Bold";
+  src: url("../fonts/Benton/BentonSans\ Bold.otf");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather/Merriweather-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Capitolium";
+  src: url("../fonts/Capitolium/Capitolium\ RegularRoman.otf");
+}
+
+@font-face {
+  font-family: "Noto";
+  src: url("../fonts/Noto/NotoSerif-Bold.ttf");
+}
+
+/* Variabelen */
+:root {
+  /* Padding */
+  --padding-breedte: 0 15px;
+  --padding-hoogte: 15px 0;
+  --padding: 15px;
+
+  /* Margin */
+  --margin-breedte: 0 15px;
+  --margin-hoogte: 15px 0;
+  --margin: 15px;
+
+  /* Kleuren */
+  --primaire-tekst-kleur: #000000;
+  --secundaire-tekst-kleur: #ffffff;
+  --tertiaire-tekst-kleur: #727272;
+
+  /* Borders */
+  --divider-border: 1px solid #eaeaea;
+
+  /* Tekstgrootte */
+  --groot-kopje: 25px
+}
+
+body {
+  margin-bottom: 50px; /* Offset voor de bottom nav (is 50px) */
+}
+
+/* Header Teaser */
+header section {
+  display: flex;
+  height: 79px;
+  padding: var(--padding-breedte);
+  border-bottom: var(--divider-border);
+  justify-content: flex-end;
+}
+
+header section a {
+  display: flex;
+}
+
+header section p {
+  text-align: right;
+  margin: auto 10px auto 0;
+  font-family: 'Merriweather';
+  font-size: 13px;
+  line-height: 1.2em;
+  max-width: 260px;
+  color: var(--primaire-tekst-kleur);
+}
+
+header section p span {
+  text-transform: uppercase;
+  font-family: 'Benton-Bold';
+  font-size: 12px;
+}
+
+header section img {
+  width: 65px;
+  height: 65px;
+  align-self: flex-end;
+}
+
+/* Header Logo */
+header > img {
+  padding: var(--padding-hoogte);
+  margin: var(--margin-breedte);
+  width: calc(100% - 30px);
+  border-bottom: var(--divider-border);
+}
+
+/* Top Nav */
+header nav {
+  height: 50px;
+  border-bottom: var(--divider-border);
+  overflow-x: scroll;
+  z-index: 10;
+  background-color: var(--secundaire-tekst-kleur);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.fixedMargin {
+  margin-top: 64px; 
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  font-family: 'Merriweather';
+  max-width: 350%;
+  width: 350%;
+  padding: 0 15px;
+  font-size: 14px;
+  height: 100%;
+  align-items: center;
+}
+
+header nav ul li a {
+  color: var(--tertiaire-tekst-kleur);
+}
+
+header nav .active {
+  padding-bottom: 12px;
+  border-bottom: 4px solid #000;
+}
+
+/* Main */
+/* Hero */
+main > header {
+  position: relative;
+  margin: var(--margin-hoogte);
+}
+
+main header a header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:0;
+  padding: 75px 15px 15px 15px;
+  background-image:linear-gradient(to top,rgba(0, 0, 0, .50),rgba(0, 0, 0, .50), rgba(0, 0, 0, 0));
+  text-align: center;
+  color: var(--secundaire-tekst-kleur);
+  font-family: 'Noto';
+}
+
+main header h1 {
+  font-size: var(--groot-kopje);
+  line-height: 1.2em;
+}
+
+main header p {
+  font-family: 'Benton-Thin';
+  font-size: 13px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+main header p span {
+  font-family: 'Benton-Bold';
+  margin-right: 5px;
+}
+
+/* Nieuws */
+main section {
+  margin: 30px 15px 0 15px;
+  border-top: 8px solid #008bc3;
+}
+
+main section > header {
+  display: flex;
+  align-items: center;
+  padding: var(--padding-hoogte);
+}
+
+main section > header h2 {
+  font-family: 'Benton-Bold';
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+main section > header a {
+  font-family: 'Benton-Light';
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--primaire-tekst-kleur);
+  margin-left: auto;
+}
+
+main section article {
+  padding-bottom: var(--padding);
+}
+
+main section a {
+  display: flex;
+  align-items: center;
+}
+
+main section article + article {
+  padding: var(--padding-hoogte);
+  border-top: var(--divider-border);
+}
+
+main section article img {
+  width: 65px;
+}
+
+main section article header h3 {
+  margin-left: var(--margin);
+  font-size: 14px;
+  font-family: 'Merriweather';
+  font-weight: normal;
+  color: var(--primaire-tekst-kleur);
+}
+
+/* Bottom Nav */
+main aside nav {
+  height: 50px;
+  border-top: var(--divider-border);
+  z-index: 10;
+  background-color: var(--secundaire-tekst-kleur);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+main aside nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-family: 'Benton-Light';
+    font-size: 12px;
+    height: 100%;
+    align-items: center;
+}
+
+main aside nav ul li a {  
+  color: var(--tertiaire-tekst-kleur);
+}
+
+main aside nav .active {
+  color: var(--primaire-tekst-kleur);
+}
