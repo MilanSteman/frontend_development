@@ -36,10 +36,19 @@
       <workItem from="1600081987582" duration="931000" />
       <workItem from="1600351986111" duration="51000" />
       <workItem from="1600353818519" duration="19000" />
+      <workItem from="1601391780726" duration="49000" />
+      <workItem from="1601391843165" duration="779000" />
+      <workItem from="1601564537113" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="705" y="292" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601391816098">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="705" y="292" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2048.1112/-1920.346.1920.1040@0.0.2048.1112" timestamp="1601391816098" />
   </component>
 </project>

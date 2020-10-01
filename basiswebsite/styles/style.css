@@ -1,282 +1,499 @@
 /* CSS Document */
 *, *::after, *::before {
-  box-sizing:border-box;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    text-decoration: none;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 @font-face {
-  font-family: "Baskerville";
-  src: url("../fonts/Baskerville/LibreBaskerville-Regular.ttf");
+    font-family: "Benton";
+    src: url("../fonts/Benton/BentonSans\ Regular.otf");
 }
 
 @font-face {
-  font-family: "Benton";
-  src: url("../fonts/Benton/BentonSans\ Regular.otf");
+    font-family: "Benton-Light";
+    src: url("../fonts/Benton/BentonSans\ Light.otf");
 }
 
 @font-face {
-  font-family: "Benton-Light";
-  src: url("../fonts/Benton/BentonSans\ Light.otf");
+    font-family: "Benton-Thin";
+    src: url("../fonts/Benton/BentonSans\ Thin.otf");
 }
 
 @font-face {
-  font-family: "Benton-Thin";
-  src: url("../fonts/Benton/BentonSans\ Thin.otf");
+    font-family: "Benton-Bold";
+    src: url("../fonts/Benton/BentonSans\ Bold.otf");
 }
 
 @font-face {
-  font-family: "Benton-Bold";
-  src: url("../fonts/Benton/BentonSans\ Bold.otf");
-}
-
-@font-face {
-  font-family: "Merriweather";
-  src: url("../fonts/Merriweather/Merriweather-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Capitolium";
-  src: url("../fonts/Capitolium/Capitolium\ RegularRoman.otf");
-}
-
-@font-face {
-  font-family: "Noto";
-  src: url("../fonts/Noto/NotoSerif-Bold.ttf");
+    font-family: "Merriweather";
+    src: url("../fonts/Merriweather/Merriweather-Regular.ttf");
 }
 
 /* Variabelen */
 :root {
-  /* Padding */
-  --padding-breedte: 0 15px;
-  --padding-hoogte: 15px 0;
-  --padding: 15px;
+    /* Padding */
+    --padding-breedte: 0 15px;
+    --padding-hoogte: 15px 0;
+    --padding: 15px;
 
-  /* Margin */
-  --margin-breedte: 0 15px;
-  --margin-hoogte: 15px 0;
-  --margin: 15px;
+    /* Margin */
+    --margin-breedte: 0 15px;
+    --margin-hoogte: 15px 0;
+    --margin: 15px;
 
-  /* Kleuren */
-  --primaire-tekst-kleur: #000000;
-  --secundaire-tekst-kleur: #ffffff;
-  --tertiaire-tekst-kleur: #727272;
+    /* Kleuren */
+    --primaire-tekst-kleur: #000000;
+    --secundaire-tekst-kleur: #ffffff;
+    --tertiaire-tekst-kleur: #727272;
 
-  /* Borders */
-  --divider-border: 1px solid #eaeaea;
+    /* Borders */
+    --divider-border: 1px solid #eaeaea;
 
-  /* Tekstgrootte */
-  --groot-kopje: 25px
+    /* Tekstgrootte */
+    --groot-kopje: 25px;
+}
+  
+body {
+    margin-bottom: 160px; /* Offset voor de bottom nav (is 60px) */
+    background-color: #EAEAEA;
 }
 
-body {
-  margin-bottom: 50px; /* Offset voor de bottom nav (is 50px) */
+section, header, article, aside {
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'capitolium-2', serif;
+}
+
+h2, h3 {
+    font-size: 22px;
+}
+
+p, h4 {
+    font-size: 13px;
+}
+
+header > a {
+    font-size: 13px;
+}
+
+strong {
+    font-family: 'Benton-Bold';
+    text-transform: uppercase;
 }
 
 /* Header Teaser */
 header section {
-  display: flex;
-  height: 79px;
-  padding: var(--padding-breedte);
-  border-bottom: var(--divider-border);
-  justify-content: flex-end;
+    display: flex;
+    height: 79px;
+    padding: var(--padding-breedte);
+    border-bottom: var(--divider-border);
+    justify-content: flex-end;
 }
 
 header section a {
-  display: flex;
+    display: flex;
 }
 
 header section p {
-  text-align: right;
-  margin: auto 10px auto 0;
-  font-family: 'Merriweather';
-  font-size: 13px;
-  line-height: 1.2em;
-  max-width: 260px;
-  color: var(--primaire-tekst-kleur);
+    text-align: right;
+    margin: auto 10px auto 0;
+    font-family: 'Merriweather';
+    line-height: 1.2em;
+    max-width: 260px;
+    color: var(--primaire-tekst-kleur);
 }
 
-header section p span {
-  text-transform: uppercase;
-  font-family: 'Benton-Bold';
-  font-size: 12px;
+header section p strong {
+    font-size: 12px;
 }
 
 header section img {
-  width: 65px;
-  height: 65px;
-  align-self: flex-end;
+    width: 65px;
+    height: 65px;
+    align-self: flex-end;
 }
 
 /* Header Logo */
 header > img {
-  padding: var(--padding-hoogte);
-  margin: var(--margin-breedte);
-  width: calc(100% - 30px);
-  border-bottom: var(--divider-border);
+    padding: var(--padding-hoogte);
+    margin: var(--margin-breedte);
+    width: calc(100% - 30px);
+    border-bottom: var(--divider-border);
 }
 
 /* Top Nav */
 header nav {
-  height: 50px;
-  border-bottom: var(--divider-border);
-  overflow-x: scroll;
-  z-index: 10;
-  background-color: var(--secundaire-tekst-kleur);
+    height: 50px;
+    border-bottom: var(--divider-border);
+    overflow-x: scroll;
+    z-index: 10;
+    background-color: var(--secundaire-tekst-kleur);
 }
 
 .fixed {
-  position: fixed;
-  top: 0;
+    position: fixed;
+    top: 0;
 }
 
 .fixedMargin {
-  margin-top: 64px; 
+    margin-top: 49px;
 }
 
 header nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  font-family: 'Merriweather';
-  max-width: 350%;
-  width: 350%;
-  padding: 0 15px;
-  font-size: 14px;
-  height: 100%;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    font-family: 'Merriweather';
+    max-width: 350%;
+    width: 350%;
+    padding: 0 15px;
+    font-size: 14px;
+    height: 100%;
+    align-items: center;
 }
 
 header nav ul li a {
-  color: var(--tertiaire-tekst-kleur);
+    color: var(--tertiaire-tekst-kleur);
 }
 
 header nav .active {
-  padding-bottom: 12px;
-  border-bottom: 4px solid #000;
+    padding-bottom: 12px;
+    border-bottom: 4px solid #000;
+}
+
+.activeBlue {
+    padding-bottom: 12px;
+    border-bottom: 4px solid #008bc3;
 }
 
 /* Main */
 /* Hero */
 main > header {
-  position: relative;
-  margin: var(--margin-hoogte);
+    position: relative;
+    padding: var(--padding);
+    margin-bottom: 8px;
+    box-shadow: 0 1px 0 #d4d4d4;
+}
+
+.header_section a header {
+    position: absolute;
+    margin: 0;
+    font-family: 'capitolium-2', serif;
+}
+
+.header_section img {
+    vertical-align: bottom; /* zorgt ervoor dat a geen extra witruimte inneemt */
 }
 
 main header a header {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin:0;
-  padding: 75px 15px 15px 15px;
-  background-image:linear-gradient(to top,rgba(0, 0, 0, .50),rgba(0, 0, 0, .50), rgba(0, 0, 0, 0));
-  text-align: center;
-  color: var(--secundaire-tekst-kleur);
-  font-family: 'Noto';
+    bottom: 20px;
+    left: 15px;
+    right: 15px;
+    margin: 0;
+    padding: 75px 15px 15px 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .50), rgba(0, 0, 0, .50), rgba(0, 0, 0, 0));
+    text-align: center;
+    color: var(--secundaire-tekst-kleur);
 }
 
-main header h1 {
-  font-size: var(--groot-kopje);
-  line-height: 1.2em;
+.header_section h1 {
+    font-size: var(--groot-kopje);
+    line-height: 1.2em;
+    font-weight: normal;
 }
 
-main header p {
-  font-family: 'Benton-Thin';
-  font-size: 13px;
-  font-weight: lighter;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+.header_section h1 strong {
+    font-family: 'capitolium-2', serif;
+    text-transform: none;
 }
 
-main header p span {
-  font-family: 'Benton-Bold';
-  margin-right: 5px;
+.header_section p {
+    font-family: 'Benton-Thin';
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.header_section p strong {
+    margin-right: 5px;
 }
 
 /* Nieuws */
-main section {
-  margin: 30px 15px 0 15px;
-  border-top: 8px solid #008bc3;
+.voorpagina, .podcasts, .nieuws_achtergrond {
+    margin-bottom: 30px;
+    background-color: #EAEAEA;
 }
 
-main section > header {
-  display: flex;
-  align-items: center;
-  padding: var(--padding-hoogte);
+.voorpagina {
+    box-shadow: 0 1px 0 #d4d4d4;
 }
 
-main section > header h2 {
-  font-family: 'Benton-Bold';
-  font-size: 13px;
-  text-transform: uppercase;
+.voorpagina > header, .voorpagina > section, .voorpagina > article,
+.podcasts > header, .podcasts > section, .podcasts > article,
+.nieuws_achtergrond > header, .nieuws_achtergrond > section, .nieuws_achtergrond > article {
+    padding: 15px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 0 #d4d4d4;
 }
 
-main section > header a {
-  font-family: 'Benton-Light';
-  font-size: 13px;
-  text-transform: uppercase;
-  color: var(--primaire-tekst-kleur);
-  margin-left: auto;
+.voorpagina section > header, .nieuws_achtergrond section:nth-of-type(1) > header {
+    display: flex;
+    align-items: center;
+    border-top: 8px solid #008bc3;
+    padding-top: 15px;
 }
 
-main section article {
-  padding-bottom: var(--padding);
+.voorpagina header {
+    display: flex;
 }
 
-main section a {
-  display: flex;
-  align-items: center;
+.voorpagina header h4, .nieuws_achtergrond h4 {
+    font-family: 'Benton-Bold';
+    text-transform: uppercase;
 }
 
-main section article + article {
-  padding: var(--padding-hoogte);
-  border-top: var(--divider-border);
+.voorpagina header a {
+    font-family: 'Benton-Light';
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--primaire-tekst-kleur);
+    margin-left: auto;
 }
 
-main section article img {
-  width: 65px;
+.voorpagina header svg {
+    margin-left: 5px;
 }
 
-main section article header h3 {
-  margin-left: var(--margin);
-  font-size: 14px;
-  font-family: 'Merriweather';
-  font-weight: normal;
-  color: var(--primaire-tekst-kleur);
+.voorpagina ul, .nieuws_achtergrond ul {
+    list-style: none;
+}
+
+.voorpagina li, .nieuws_achtergrond li {
+    padding: var(--padding-hoogte);
+}
+
+.voorpagina li + li, .nieuws_achtergrond li + li {
+    border-top: var(--divider-border);
+}
+
+.voorpagina ul li a, .nieuws_achtergrond ul li a {
+    display: flex;
+    align-items: center;
+}
+
+.voorpagina li img, .nieuws_achtergrond li img {
+    width: 65px;
+}
+
+.voorpagina li header h3, .nieuws_achtergrond li header h3 {
+    margin-left: var(--margin);
+    font-size: 14px;
+    font-family: 'Merriweather';
+    font-weight: normal;
+    color: var(--primaire-tekst-kleur);
+}
+
+/* Full width posts */
+.voorpagina article, .podcasts article, .nieuws_achtergrond article {
+    display: flex;
+    flex-direction: column;
+}
+
+.voorpagina article img, .podcasts > article > a > img, .nieuws_achtergrond article > a > img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.voorpagina article p, .podcasts article p, .nieuws_achtergrond article p {
+    font-family: 'Benton-Thin';
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: var(--primaire-tekst-kleur);
+}
+
+.voorpagina article p strong, .podcasts article p strong, .nieuws_achtergrond article p strong {
+    margin-right: 5px;
+}
+
+.voorpagina article h3, .podcasts article h3, .nieuws_achtergrond article h3 {
+    line-height: 1.2em;
+    font-weight: normal;
+    color: var(--primaire-tekst-kleur);
+}
+
+.voorpagina article h3 strong, .podcasts article h3 strong, .nieuws_achtergrond article h3 strong {
+    font-family: 'capitolium-2', serif;
+    text-transform: none;
+}
+
+.voorpagina section ol {
+    list-style: none;
+}
+
+.voorpagina section ol li {
+    list-style: none;
+    counter-increment: step-counter;
+    display: flex;
+}
+
+.voorpagina section ol li::before {
+    content: counter(step-counter);
+    color: #ccc;
+    font-size: 42px;
+}
+
+.voorpagina section ol li a {
+    display: flex;
+    align-items: center;
+}
+
+/* Section Podcasts */
+.podcasts > header {
+    text-align: center;
+}
+
+.podcasts button {
+    margin-top: 23px;
+    font-family: 'Benton';
+    font-size: 14px;
+    border: 1px solid #eaeaea;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.header_section {
+    position: relative;
+}
+
+.podcasts .header_section:nth-of-type(1),
+.nieuws_achtergrond .header_section:nth-of-type(1) {
+    padding: 0;
+}
+
+.podcasts .header_section p, .podcasts .header_section h1,
+.nieuws_achtergrond .header_section p, .nieuws_achtergrond .header_section h1 {
+    color: var(--secundaire-tekst-kleur);
+}
+
+.podcasts .header_section a header {
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 75px 75px 15px 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .50), rgba(0, 0, 0, .50), rgba(0, 0, 0, 0));
+    text-align: left;
+}
+
+.nieuws_achtergrond .header_section:nth-of-type(1) a header {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 15px 15px 75px 15px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .50), rgba(0, 0, 0, .50), rgba(0, 0, 0, 0));
+    text-align: left;
+}
+
+.podcasts .header_section:nth-of-type(2) a header {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 15px;
+    padding: 15px 75px 75px 15px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .50), rgba(0, 0, 0, .50), rgba(0, 0, 0, 0));
+    text-align: left;
+    color: var(--secundaire-tekst-kleur);
+}
+
+.podcasts .header_section:nth-of-type(1) img, .podcasts .header_section:nth-of-type(2) img,
+.nieuws_achtergrond .header_section:nth-of-type(1) img {
+    height: auto;
+    margin: 0;
 }
 
 /* Bottom Nav */
 main aside nav {
-  height: 50px;
-  border-top: var(--divider-border);
-  z-index: 10;
-  background-color: var(--secundaire-tekst-kleur);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    height: 60px;
+    border-top: var(--divider-border);
+    z-index: 10;
+    background-color: var(--secundaire-tekst-kleur);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-main aside nav ul{
+main aside nav ul {
     display: flex;
     list-style: none;
     justify-content: space-around;
-    font-family: 'Benton-Light';
-    font-size: 12px;
+    font-family: 'Benton';
+    font-size: 9.5px;
     height: 100%;
     align-items: center;
 }
 
-main aside nav ul li a {  
-  color: var(--tertiaire-tekst-kleur);
+.podcasts .nextBtn, .nieuws_achtergrond .nextBtn {
+    width: 70%;
+    color: #727272;
+    background-color: #f1f1f1;
+    position: relative;
+    left: calc(50% - 35%);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0 0 0;
+    font-family: 'Benton';
+    font-size: 14px;
+    border: 1px solid #eaeaea;
+    padding: 10px 0;
+    border-radius: 25px;
+}
+
+.nieuws_achtergrond header h2 {
+    text-align: center;
+    font-family: 'Benton-Thin';
+}
+
+.nieuws_achtergrond header h2 span {
+    font-family: 'capitolium-2', serif;
+    font-weight: bold;
+    color: #008bc3;
+}
+
+.nieuws_achtergrond li img {
+    height: 65px;
+    object-fit: cover;
+
+}
+
+.nieuws_achtergrond li header h3 {
+    white-space: pre-line;
+}
+
+main aside nav ul li a {
+    color: var(--tertiaire-tekst-kleur);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main aside nav .active {
-  color: var(--primaire-tekst-kleur);
+    color: var(--primaire-tekst-kleur);
+}
+
+main aside nav ul li a svg {
+    margin: 5px 0;
 }
