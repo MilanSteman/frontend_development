@@ -65,6 +65,10 @@ body {
     background-color: #EAEAEA;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 section, header, article, aside {
     background-color: #ffffff;
 }
@@ -496,4 +500,83 @@ main aside nav .active {
 
 main aside nav ul li a svg {
     margin: 5px 0;
+}
+
+main header > figure img {
+    padding: 0;
+}
+
+.header_article { 
+    padding: 15px 0;
+}
+
+.header_article p, .header_article h1 {
+    text-align: center;
+    padding: 0 15px;
+} 
+
+.header_article header p, {
+    font-size: 14px;
+}
+
+.header_article header h1 {
+    font-size: 32px;
+}
+
+.header_article figure {
+    margin: 15px 0 ;
+}
+
+.header_article > p:nth-of-type(1) {
+    font-size: 21px;
+    font-family: 'capitolium-2';
+    font-weight: normal;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+
+.header_article p:nth-of-type(2) {
+    font-size: 13px;
+}
+
+main article > section {
+    padding: 0 15px;
+}
+
+main article > section p {
+    font-size: 19px;
+    font-family: 'capitolium-2';
+}
+
+main article > section p::first-letter {
+    font-weight: bold;
+    font-size: 90px;
+    position: absolute;
+    float: left;
+    margin: -25px 10px -25px 0;
+}
+
+main article > section p a {
+    color: #0097d8;
+}
+
+.article_navigation {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: var(--divider-border);
+}
+
+.article_navigation img {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+.article_news {
+    margin-top: 53px;
 }
