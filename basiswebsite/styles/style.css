@@ -238,7 +238,7 @@ main > header p {
 
 /** Other articles **/
 main > section {
-    margin: 30px 0;
+    padding-bottom: 30px;
 }
 
 main > section:nth-of-type(1) {

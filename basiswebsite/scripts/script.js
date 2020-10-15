@@ -4,6 +4,7 @@ let content = document.querySelector('main');
 let topNav = navigation.offsetTop;
 
 //variabelen sections
+let voorpagina = document.querySelector('main > section:nth-of-type(1)');
 let nieuwsAchtergrond = document.querySelector('main > section:nth-of-type(2)');
 let columnsOpinie = document.querySelector('main > section:nth-of-type(3)');
 let uitgelicht = document.querySelector('main > section:nth-of-type(4)');
@@ -29,13 +30,13 @@ let economieNav = document.querySelector('header nav ul li:nth-of-type(10) a');
 let sportNav = document.querySelector('header nav ul li:nth-of-type(11) a');
 
 //variabelen top sections
-let topNieuwsAchtergrond = nieuwsAchtergrond.offsetTop;
+let topNieuwsAchtergrond = nieuwsAchtergrond.offsetTop - 50;
 let topColumnsOpinie = columnsOpinie.offsetTop;
 let topUitgelicht = uitgelicht.offsetTop;
 let topWetenschap = wetenschap.offsetTop;
 let topMensen = mensen.offsetTop;
 let topDeGids = deGids.offsetTop;
-let topCultuurMedia = cultuurMedia.offsetTop;
+let topCultuurMedia = cultuurMedia.offsetTop; 
 let topFoto = foto.offsetTop;
 let topEconomie = economie.offsetTop;
 let topSport= sport.offsetTop;
@@ -69,7 +70,7 @@ function checkSection() {
     navigation.scroll({left: uitgelichtNav.offsetLeft - 15, behavior: 'smooth'});
   } else if (window.pageYOffset >= topWetenschap && window.pageYOffset <= topMensen) { //wetenschap
     removeAllClasses();
-    wetenschapNav.classList.add('active');
+    wetenschapNav.classList.add('activeBlue');
     navigation.scroll({left: wetenschapNav.offsetLeft - 15, behavior: 'smooth'});
   } else if (window.pageYOffset >= topMensen && window.pageYOffset <= topDeGids) { //mensen
     removeAllClasses();
@@ -101,7 +102,7 @@ function removeAllClasses() {
   nieuwsAchtergrondNav.classList.remove('activeBlue');
   columnsOpinieNav.classList.remove('activeBlue');
   uitgelichtNav.classList.remove('active');
-  wetenschapNav.classList.remove('active');
+  wetenschapNav.classList.remove('activeBlue');
   mensenNav.classList.remove('active');
   deGidsNav.classList.remove('active');
   cultuurMediaNav.classList.remove('active');
@@ -113,6 +114,61 @@ function removeAllClasses() {
 window.addEventListener('scroll' , function(){
     fixedNav();
     checkSection();
+});
+
+voorpaginaNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topNav , behavior: "smooth"});
+});
+
+nieuwsAchtergrondNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topNieuwsAchtergrond + 1, behavior: "smooth"});
+});
+
+columnsOpinieNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topColumnsOpinie + 1, behavior: "smooth"});
+});
+
+uitgelichtNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topUitgelicht + 1, behavior: "smooth"});
+});
+
+wetenschapNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topWetenschap + 1, behavior: "smooth"});
+});
+
+mensenNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topMensen + 1, behavior: "smooth"});
+});
+
+deGidsNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topDeGids + 1, behavior: "smooth"});
+});
+
+cultuurMediaNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topCultuurMedia + 1, behavior: "smooth"});
+});
+
+fotoNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topFoto + 1, behavior: "smooth"});
+});
+
+economieNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topEconomie + 1, behavior: "smooth"});
+});
+
+sportNav.addEventListener('click', function(event){
+  event.preventDefault(); //stop a tag met refreshen
+  window.scroll({top: topSport + 1, behavior: "smooth"});
 });
 
 console.log('lol')
