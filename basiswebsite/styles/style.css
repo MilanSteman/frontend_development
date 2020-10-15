@@ -125,6 +125,7 @@ header section {
     border-bottom: var(--divider-border);
     height: 79px;
     display: flex;
+    max-height: 90px;
 }
 
 header section img {
@@ -729,18 +730,21 @@ main aside nav ul li a svg {
 
 /* Full Article Styling */
 /** 'Navigation' Article **/
-.full-article > header {
+.full-article > header > section:first-of-type {
     display: flex;
     padding: var(--padding-regular);
     align-items: center;
     justify-content: space-between;
     position: fixed;
     top: 0;
+    background-color: var(--secundaire-kleur);
     z-index: 1;
     border-bottom: var(--divider-border);
+    max-height: 56px;
 }
 
 .full-article > header img {
+    align-self: center;
     width: 60%;
     margin: 0;
     padding: 0;
@@ -750,6 +754,47 @@ main aside nav ul li a svg {
 .full-article > header a {
     display: flex;
     align-items: center;
+}
+
+/** Modal **/
+.full-article header > section:nth-of-type(2) {
+    flex-direction: column;
+    background-color: var(--secundaire-kleur);
+    max-height: 200px;
+    height: auto;
+    transition: .75s;
+    margin-top: -127px;
+}
+
+.full-article header > section:nth-of-type(2).modalMargin {
+    margin-top: 0;
+}
+
+.full-article header > section:nth-of-type(2) svg {
+    width: 55px;
+}
+
+.full-article header > section:nth-of-type(2) ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--margin-regular) 0;
+}
+
+.full-article header > section:nth-of-type(2) ul li {
+    margin-right: var(--margin-small);
+}
+
+.full-article header > section:nth-of-type(2) > a {
+    font-family: 'Benton-Light';
+    color: var(--primaire-kleur);
+    text-decoration: underline;
+    margin: 0 auto var(--margin-medium) auto;
+}
+
+.full-article header > section:nth-of-type(2) > a svg{
+    width: 20px;
+    margin-right: var(--margin-small);
 }
 
 .full-article {
@@ -861,7 +906,7 @@ main aside nav ul li a svg {
 
 .full-article main > article > footer > section:last-of-type {
     border: none;
-    padding-bottom: var(--padding-regular);
+    padding: var(--padding-small) 0;
 }
 
 .full-article main > article > footer > section:last-of-type ul {
@@ -884,4 +929,43 @@ main aside nav ul li a svg {
     font-size: 0.75em;
     text-transform: uppercase;
     font-family: 'Benton-Bold';
+}
+
+/** Button naar top **/
+aside button {
+    position: absolute;
+    bottom: 85px;
+    right: 15px;
+    z-index: 10;
+    position: fixed;
+    padding: 10px var(--padding-regular);
+    transition: 1.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--primaire-kleur);
+    color: var(--secundaire-kleur);
+    font-family: 'Benton';
+    opacity: 0;
+}
+
+aside button:hover {
+    background-color: var(--secundaire-kleur);
+    color: var(--primaire-kleur);
+    border: 1px solid var(--primaire-kleur);
+}
+
+.buttonOpacity {
+    opacity: 1;
+}
+
+/** Progress bar **/
+.full-article > header > section > div {
+    position: absolute;
+    background-color: var(--primaire-kleur);
+    top: 56px;
+    left: 0;
+    height: 2px;
+    width: 1px;
 }

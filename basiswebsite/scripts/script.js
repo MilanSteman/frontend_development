@@ -170,5 +170,4 @@ sportNav.addEventListener('click', function(event){
   event.preventDefault(); //stop a tag met refreshen
   window.scroll({top: topSport + 1, behavior: "smooth"});
 });
-
 console.log('lol')
