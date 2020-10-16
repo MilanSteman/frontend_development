@@ -9,8 +9,9 @@ let progressBar = document.querySelector('.full-article > header > section > div
 let fullArticle = document.querySelector('.full-article > main > article');
 
 
-shareButton.addEventListener('click', function() {
-    shareModal.classList.toggle('modalMargin');
+shareButton.addEventListener('click', function(event) {
+    event.preventDefault(); //stop naar boven scrollen
+    shareModal.classList.toggle('opacityModal');
 });
 
 shareLink.addEventListener('click', function(){ //update tekst als je op link kopieren klikt
@@ -26,10 +27,10 @@ function showButton(genoegScroll) {
         bovenButton.classList.add('buttonOpacity');
     } else {
         bovenButton.classList.remove('buttonOpacity');
-
     }
 }
 
+//inspiratie https://codepen.io/pimpiet/pen/bRqegQ
 function progress(gelezen, textOver) {
     textOver = fullArticle.offsetHeight - window.innerHeight; //check de height van het volledige artikel - de hoogte van je scherm
     gelezen = window.scrollY / textOver * 100; //check hoever je bent door je scrollhoogte te delen door het aantal tekst waar nog niet door gescrollt is.
@@ -39,6 +40,8 @@ function progress(gelezen, textOver) {
 window.addEventListener('scroll', function() {
     showButton();
     progress();
+
+    shareModal.classList.remove('opacityModal'); 
 });
 
 bovenButton.addEventListener('click', function() {

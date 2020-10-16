@@ -1,7 +1,7 @@
 // JavaScript Document
 let navigation = document.querySelector('header nav');
 let content = document.querySelector('main');
-let topNav = navigation.offsetTop;
+let topMain = content.offsetTop;
 
 //variabelen sections
 let voorpagina = document.querySelector('main > section:nth-of-type(1)');
@@ -42,12 +42,14 @@ let topEconomie = economie.offsetTop;
 let topSport= sport.offsetTop;
 
 function fixedNav() {
-  if (window.pageYOffset >= topNav) {
-    content.classList.add('fixedMargin')
+  if (window.pageYOffset >= topMain) {
     navigation.classList.add('fixed')
+    navigation.hidden = false;
+    content.classList.add('fixedMargin');
   } else {
-    content.classList.remove('fixedMargin')
     navigation.classList.remove('fixed');
+    navigation.hidden = true;
+    content.classList.remove('fixedMargin');
   }
 }
 
