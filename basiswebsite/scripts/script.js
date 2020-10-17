@@ -30,6 +30,7 @@ let economieNav = document.querySelector('header nav ul li:nth-of-type(10) a');
 let sportNav = document.querySelector('header nav ul li:nth-of-type(11) a');
 
 //variabelen top sections
+let topNav = navigation.offsetTop;
 let topNieuwsAchtergrond = nieuwsAchtergrond.offsetTop - 50;
 let topColumnsOpinie = columnsOpinie.offsetTop;
 let topUitgelicht = uitgelicht.offsetTop;
@@ -41,16 +42,15 @@ let topFoto = foto.offsetTop;
 let topEconomie = economie.offsetTop;
 let topSport= sport.offsetTop;
 
+
 function fixedNav() {
-  if (window.pageYOffset >= topMain) {
-    navigation.classList.add('fixed')
-    navigation.hidden = false;
-    content.classList.add('fixedMargin');
-  } else {
-    navigation.classList.remove('fixed');
-    navigation.hidden = true;
-    content.classList.remove('fixedMargin');
-  }
+    if (window.pageYOffset >= topMain) {
+      navigation.classList.add('fixed')
+      content.classList.add('fixedMargin');
+    } else {
+      navigation.classList.remove('fixed');
+      content.classList.remove('fixedMargin');
+    }
 }
 
 function checkSection() {
