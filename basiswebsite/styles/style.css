@@ -746,6 +746,7 @@ main aside nav ul li a svg {
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    width: 100%;
     top: 0;
     background-color: var(--secundaire-kleur);
     z-index: 15;
@@ -754,12 +755,18 @@ main aside nav ul li a svg {
 }
 
 .full-article > header img {
+    position: absolute;
+    left: 25%;
+    padding: var(--padding-regular);
     align-self: center;
-    width: 60%;
     height: 100%;
+    width: 50%;
     margin: 0;
-    padding: 0;
     border: none;
+}
+
+.full-article > header > section > a:first-of-type {
+    width: auto;
 }
 
 .full-article > header > section a {
@@ -778,6 +785,7 @@ main aside nav ul li a svg {
     top: 56px;
     width: 100%;
     opacity: 0;
+    z-index: 100;
 }
 
 .full-article header > section:nth-of-type(2).opacityModal {
@@ -809,6 +817,19 @@ main aside nav ul li a svg {
 .full-article header > section:nth-of-type(2) > a svg{
     width: 20px;
     margin-right: var(--margin-small);
+}
+
+.full-article > header > section > ul {
+    display: none;
+    flex-grow: 0;
+}
+
+.full-article > header > section > ul li+li {
+    margin-left: var(--margin-regular);
+}
+
+.full-article > header > section > ul li a {
+    max-height: 22px;
 }
 
 .full-article {
@@ -946,7 +967,6 @@ main aside nav ul li a svg {
 
 /** Button naar top **/
 aside button {
-    position: absolute;
     bottom: 85px;
     right: 15px;
     z-index: 10;
@@ -995,6 +1015,10 @@ aside button:hover {
         margin: 0 auto;
         background-color: var(--secundaire-kleur);
     }
+    
+    .buttonOpacity {
+        opacity: 0;
+    }
 
     main > header > article {
         box-shadow: none;
@@ -1029,7 +1053,7 @@ aside button:hover {
         max-width: 200%;
     }
 
-    aside {
+    aside nav {
         display: none;
     }
 
@@ -1172,7 +1196,7 @@ aside button:hover {
     }
 
     main > section > header {
-        grid-column: 1/3;
+        grid-column: 1/-1;
         grid-row: 1;    
         margin-bottom: 0;
         padding: 0 0 15px 0;
@@ -1267,14 +1291,15 @@ aside button:hover {
         max-width: 600px;
     }
 
+    .full-article article {
+        max-width: 600px;
+        margin: auto;
+    }
+
     .full-article > main > section > article:first-of-type {
         height: 600px;
         grid-column: 1/3;
         grid-row: 2/4;
-    }
-
-    .full-article > main > section:first-of-type article:last-of-type {
-        grid-column: 2;
     }
 
     body > header {
@@ -1301,7 +1326,7 @@ aside button:hover {
         justify-content: space-between;
     }
 
-    header > section > ul > li > a{
+    header > section > ul > li > a {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1314,11 +1339,23 @@ aside button:hover {
     header > section > ul > li > a > svg {
         margin-bottom: 5px;
     }
+
+    .full-article header > section > ul > li > a > svg {
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 1000px) { /* desktop formaat */
     body {
         max-width: 920px;
+    }
+
+    .full-article > header > section {
+        max-width: 920px;
+    }
+
+    .full-article > header > section > a:last-of-type {
+        margin: 0;
     }
 
     main > section, main > header {
@@ -1381,11 +1418,39 @@ aside button:hover {
     footer > img {
         bottom: 16%;
     }
+
+    .full-article > header > section > a:last-of-type {
+        display: none;
+    }
+
+    .full-article > header > section > ul {
+        display: flex;
+    }
+
+    .full-article > header > section:first-of-type {
+        padding: var(--padding-regular) 0;
+    }
 }
 
 @media screen and (min-width: 1320px) { /* desktop groot formaat */
     body {
         max-width: 1240px;
+    }
+
+    body > header > section > a:first-of-type {
+        margin-bottom: 10px;
+    }
+
+    .full-article > header > section > a:first-of-type {
+        margin: 0;
+    }
+
+    header > section > a:last-of-type {
+        width: 35%
+    }
+
+    body > header {
+        margin-top: var(--margin-big);
     }
 
     header > nav  {
@@ -1435,6 +1500,16 @@ aside button:hover {
     main > section:nth-of-type(9) article header {
         right: 0;
         padding: 75px 15px 15px 162px;
+    }
+
+    .full-article > header > section:first-of-type {
+        max-width: 1240px;
+        width: 1240px;
+    }
+
+    body > footer {
+        width: 1240px;
+        max-width: 1240px;
     }
 
      
