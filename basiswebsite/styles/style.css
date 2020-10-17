@@ -828,7 +828,7 @@ main aside nav ul li a svg {
     margin-left: var(--margin-regular);
 }
 
-.full-article > header > section > ul li a {
+.full-article > header > section:first-of-type > ul li a {
     max-height: 22px;
 }
 
@@ -1348,6 +1348,10 @@ aside button:hover {
 @media screen and (min-width: 1000px) { /* desktop formaat */
     body {
         max-width: 920px;
+    }
+
+    .full-article header > section:nth-of-type(2) {
+        display: none;
     }
 
     .full-article > header > section {
