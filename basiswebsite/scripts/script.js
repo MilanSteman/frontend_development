@@ -120,7 +120,7 @@ window.addEventListener('scroll' , function(){
 
 voorpaginaNav.addEventListener('click', function(event){
   event.preventDefault(); //stop a tag met refreshen
-  window.scroll({top: topNav , behavior: "smooth"});
+  window.scroll({top: topMain + 1, behavior: "smooth"});
 });
 
 nieuwsAchtergrondNav.addEventListener('click', function(event){
@@ -172,4 +172,3 @@ sportNav.addEventListener('click', function(event){
   event.preventDefault(); //stop a tag met refreshen
   window.scroll({top: topSport + 1, behavior: "smooth"});
 });
-console.log('lol')

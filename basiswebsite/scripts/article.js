@@ -7,6 +7,8 @@ let shareLink = document.querySelector('.full-article header > section:nth-of-ty
 let bovenButton = document.querySelector('aside button');
 let progressBar = document.querySelector('.full-article > header > section > div');
 let fullArticle = document.querySelector('.full-article > main > article');
+let navigation = document.querySelector('header nav');
+let sportNav = document.querySelector('header nav ul li:nth-of-type(11) a');
 
 
 shareButton.addEventListener('click', function(event) {
@@ -46,4 +48,9 @@ window.addEventListener('scroll', function() {
 
 bovenButton.addEventListener('click', function() {
     window.scroll({top: 0, behavior: "smooth"});
+});
+
+document.addEventListener('DOMContentLoaded', function(){
+    navigation.scroll({left: sportNav.offsetLeft});
+    console.log('lol')
 });

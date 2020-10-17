@@ -150,6 +150,10 @@ header section a {
     display: flex;
 }
 
+header section > ul {
+    display: none;
+}
+
 /** Header Logo **/
 header > img {
     padding: var(--padding-regular);
@@ -159,7 +163,6 @@ header > img {
 /** Header Nav **/
 header nav {
     height: 50px;
-    border-bottom: var(--divider-border);
     overflow-x: scroll;
     z-index: 10;
     display: none;
@@ -172,6 +175,7 @@ header nav {
 }
 
 header nav ul {
+    border-bottom: var(--divider-border);
     display: flex;
     justify-content: space-between;
     font-family: 'Merriweather';
@@ -744,7 +748,7 @@ main aside nav ul li a svg {
     position: fixed;
     top: 0;
     background-color: var(--secundaire-kleur);
-    z-index: 1;
+    z-index: 15;
     border-bottom: var(--divider-border);
     max-height: 56px;
 }
@@ -758,7 +762,7 @@ main aside nav ul li a svg {
     border: none;
 }
 
-.full-article > header a {
+.full-article > header > section a {
     display: flex;
     align-items: center;
 }
@@ -815,7 +819,6 @@ main aside nav ul li a svg {
     background-color: white;
     padding-top: var(--padding-medium);
     margin-bottom: var(--margin-big);
-    box-shadow: 0 1px 0 #d4d4d4;
 }
 
 .full-article main > article header p, .full-article main > article  header h1, .full-article main > article  figcaption {
@@ -995,7 +998,9 @@ aside button:hover {
     }
 
     main > section > section, main > section > article,
-    main > header, header nav ul, header > section  {
+    main > header, header nav ul, header > section,
+    .full-article > main > article > section,
+    .full-article > main > article > footer {
         padding-left: 0;
         padding-right: 0;
     }
@@ -1142,6 +1147,7 @@ aside button:hover {
 
     main > section > header {
         grid-column: 1/3;
+        grid-row: 1;    
         margin-bottom: 0;
     }
 
@@ -1185,12 +1191,14 @@ aside button:hover {
     }
 
     main > section:nth-of-type(3) article:nth-of-type(3) a, main > section:nth-of-type(6) article:nth-of-type(2) a,
-    main > section:nth-of-type(10) article:nth-of-type(2) a, main > section:nth-of-type(11) article:nth-of-type(2) a {
+    main > section:nth-of-type(10) article:nth-of-type(2) a, main > section:nth-of-type(11) article:nth-of-type(2) a,
+    .full-article > main > section:last-of-type > article:nth-of-type(2) a {
         flex-direction: column;
     }
 
     main > section:nth-of-type(3) article:nth-of-type(3) img, main > section:nth-of-type(6) article:nth-of-type(2) img, 
-    main > section:nth-of-type(10) article:nth-of-type(2) img, main > section:nth-of-type(11) article:nth-of-type(2) img {
+    main > section:nth-of-type(10) article:nth-of-type(2) img, main > section:nth-of-type(11) article:nth-of-type(2) img,
+    .full-article > main > section:last-of-type > article:nth-of-type(2) img  {
         align-self: center;
         margin-bottom: 0;
         margin-top: auto;
@@ -1223,10 +1231,12 @@ aside button:hover {
 
     footer > section:nth-of-type(2) {
         border: none;
+        grid-row: 2/4;
+        grid-column: 1/-1;
     }
 
     footer > p:first-of-type {
-        margin: 350px 0 100px 0;
+        margin-top: 100px;
         grid-column: 1/-1;
         font-size: 0.875em;
         border-top: 1px solid #d4d4d4;
@@ -1246,5 +1256,50 @@ aside button:hover {
         max-width: 600px;
     }
 
+    .full-article > main > section > article:first-of-type {
+        height: 600px;
+        grid-column: 1/3;
+        grid-row: 2/4;
+    }
 
+    .full-article > main > section:first-of-type article:last-of-type {
+        grid-column: 2;
+    }
+
+    body > header {
+        margin-top: var(--margin-medium);
+    }
+
+    .full-article > header {
+        margin-top: 0;
+    }
+
+    header > section > a {
+        width: 65%;
+    }
+
+    .full-article > header > section:first-of-type a {
+        width: auto;
+    }
+
+    header > section > ul {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: space-around   ;
+    }
+
+    header > section > ul > li > a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto 0;
+        font-size: 0.6875em;
+        color: var(--primaire-kleur);
+        font-family: 'Benton-Light';
+    }
+
+    header > section > ul > li > a > svg {
+        margin-bottom: 5px;
+    }
 }
