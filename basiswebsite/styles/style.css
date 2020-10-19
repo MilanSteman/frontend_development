@@ -1076,7 +1076,7 @@ aside button:hover {
     main > section, main > header, body > footer > section:nth-of-type(2) {
        display: grid;
        width: 600px;
-       grid-template-columns: 280px 280px;
+       grid-template-columns: repeat(2, 280px);
        grid-auto-rows: auto;
        grid-gap: 30px 40px;
        position: relative;
@@ -1371,11 +1371,11 @@ aside button:hover {
     }
 
     main > section, main > header {
-       grid-template-columns: 280px 280px 280px;
+       grid-template-columns: repeat(3, 280px);
     }
 
     body > footer > section:nth-of-type(2) {
-        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-columns: repeat(4, 200px);
     }
 
     header > img {
@@ -1478,12 +1478,12 @@ aside button:hover {
     }
 
     main > section, main > header {
-       grid-template-columns: 280px 280px 280px 280px;
+       grid-template-columns: repeat(4, 280px);
     }
 
     body > footer, body > footer > section:nth-of-type(2), body > footer {
         display: grid;
-        grid-template-columns: 280px 280px 280px 280px;
+        grid-template-columns: repeat(4, 280px);
         grid-gap: 30px 40px;
     }
 

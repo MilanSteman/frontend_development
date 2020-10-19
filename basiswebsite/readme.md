@@ -10,10 +10,12 @@
 **Codepen:** [https://codepen.io/MilanSteman](https://codepen.io/MilanSteman)
 ## Bronnenlijst
 1. https://www.volkskrant.nl/
-2. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
-3. https://codepen.io/pimpiet/pen/bRqegQ
-4. https://css-tricks.com/snippets/css/complete-guide-grid/
-5. https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+2. https://www.volkskrant.nl/sport/tom-brady-de-beste-football-speler-aller-tijden-verliest-eerste-duel-bij-nieuwe-club~b08d0166/
+3. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+4. https://codepen.io/pimpiet/pen/bRqegQ
+5. https://css-tricks.com/snippets/css/complete-guide-grid/
+6. https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+7. https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
 ## Intake (week 1)
 
