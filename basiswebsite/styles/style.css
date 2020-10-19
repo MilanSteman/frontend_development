@@ -73,7 +73,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-a:hover, main section > section > ul li a:hover, section > ol li a:hover, nav ul li a:hover{
+a:hover, main section > section > ul li a:hover, section > ol li a:hover, nav ul li a:hover,
+article header:hover {
     text-decoration: underline;
     color: var(--primaire-kleur);
 }
