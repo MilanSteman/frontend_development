@@ -33,14 +33,17 @@
     src: url("../fonts/Merriweather/Merriweather-Regular.ttf");
 }
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
     /* Padding */
+    --padding-tiny: 5px;
     --padding-small: 8px;
     --padding-regular: 15px;
     --padding-medium: 23px;
     --padding-big: 30px;
 
     /* Margin */
+    --marginp-tiny: 5px;
     --margin-small: 8px;
     --margin-regular: 15px;
     --margin-medium: 23px;
@@ -53,6 +56,10 @@
 
     /* Border */
     --divider-border: 1px solid #eaeaea;
+
+    /* Fonts */
+    --headline: 'capitolium-2', 'Times New Roman', serif;
+    --headline-alt: 'Merriweather', 'Times New Roman', serif;
 }
 
 body {
@@ -61,7 +68,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'capitolium-2', serif;
+    font-family: var(--headline);
     color: var(--primaire-kleur);
     font-weight: normal;
 }
@@ -89,7 +96,7 @@ strong {
 }
 
 main h1 strong, header h3 strong {
-    font-family: 'capitolium-2', serif;
+    font-family: var(--headline);
     text-transform: none;
 }
 
@@ -123,7 +130,7 @@ body > header, body > main > section > header, nav, figure {
 
 header section {
     padding: 0 var(--padding-regular);
-    font-family: 'Merriweather', serif;
+    font-family: var(--headline-alt);
     text-align: right;
     border-bottom: var(--divider-border);
     height: 79px;
@@ -193,7 +200,7 @@ header nav ul {
     border-bottom: var(--divider-border);
     display: flex;
     justify-content: space-between;
-    font-family: 'Merriweather';
+    font-family: var(--headline-alt);
     max-width: 350%;
     width: 350%;
     padding: 0 var(--padding-regular);
@@ -296,7 +303,7 @@ main section > section > ul li a header, main > section > section > ol li a head
 }
 
 main section > section > ul li a header h5, main > section > section > ol li a header h5 {
-    font-family: 'Merriweather';
+    font-family: var(--headline-alt);
     white-space: pre-line;
 }
 
@@ -313,7 +320,8 @@ main > section > section > ol {
 
 /** Styling Nummers Lijst met before element gedaan, counter-increment
     zorgt ervoor dat er iets op een nummer wordt opgeteld en step-counter is
-    de li (dus li 1 = 1, 2 = 2, etc..) **/
+    de li (dus li 1 = 1, 2 = 2, etc..) 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters **/
 main > section > section > ol li {
     list-style: none;
     counter-increment: step-counter;
@@ -395,7 +403,7 @@ main > section > header h2 {
     font-size: 1.4em;
     color: #008bc3;
     font-weight: bold;
-    font-family: 'capitolium-2', serif;
+    font-family: var(--headline);
 }
 
 main > section:nth-of-type(10) > header h2 { /* sport header */
@@ -537,7 +545,7 @@ main > section:nth-of-type(7) > header ul li {
     font-family: 'Benton';
     font-size: 0.8675em;
     border: 1px solid #eaeaea;
-    padding: 5px 10px;
+    padding: var(--padding-tiny) 10px;
     border-radius: 25px;
     background-color: white;
     transition: 1.5s;
@@ -888,7 +896,7 @@ main aside nav ul li a svg {
 
 .full-article main > article > header > p:nth-of-type(2){
     font-size: 1.375em;
-    font-family: 'capitolium-2', serif;
+    font-family: var(--headline);
     font-weight: lighter;
     text-transform: none;
     margin-bottom: var(--margin-medium);
@@ -900,7 +908,7 @@ main aside nav ul li a svg {
 
 .full-article main > article > section {
     padding: 0 var(--padding-regular);
-    font-family: 'capitolium-2', serif;
+    font-family: var(--headline);
     font-size: 1.1875em;
 }
 
@@ -1515,6 +1523,4 @@ aside button:hover {
         width: 1240px;
         max-width: 1240px;
     }
-
-     
 }
