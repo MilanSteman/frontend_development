@@ -616,6 +616,15 @@ button:hover {
 
 a:focus {
     text-decoration: underline;
+    color: #008bc3;
+}
+
+section:nth-of-type(10) a:focus, nav ul li:nth-of-type(10) a:focus {
+    color: #CF4776;
+}
+
+section:nth-of-type(11) a:focus, nav ul li:nth-of-type(11) a:focus  {
+    color: #389F10;
 }
 
 main > section a:active {
